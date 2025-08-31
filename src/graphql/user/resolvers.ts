@@ -5,10 +5,10 @@ const queries = {}
 
 const mutation = {
     createUser:async(_:any,payload:CreateUserPayload) => {
-        const user = await UserService.createUser(payload);
-        return user.id;
+        const res = await UserService.createUser(payload);
+        return res.id;
     } 
-    
+   
 }
 
 export const resolvers = {
