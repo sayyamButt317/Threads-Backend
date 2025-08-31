@@ -4,14 +4,16 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node dist/index.js",
-    "dev": "tsc-watch --onSuccess \"npm start \""
+    "start": "node init && node dist/index.js",
+    "dev": "node init && tsc-watch --onSuccess \"npm start \""
   },
   "dependencies": {
     "@apollo/server": "^4.10.4",
     "@prisma/client": "5.14.0",
+    "dotenv": "^8.2.0",
     "express": "^4.19.2",
     "graphql": "^16.8.1",
+    "node-fetch": "^3.3.2",
     "typescript": "^5.4.5"
   },
   "devDependencies": {
